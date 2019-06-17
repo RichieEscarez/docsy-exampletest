@@ -2,21 +2,29 @@
 
 This Docsy Example Project is hosted at [https://testydocsy.netlify.com/](https://testydocsy.netlify.com/).
 
-You can find detailed theme instructions in the example project under **Documentation -> Getting Started**.
+You can find detailed theme instructions in the example project site under **Documentation -> Getting Started**.
 
 This is not an officially supported Google product. This project is currently maintained.
 
-## Cloning the Docsy Example Project
+## Using the Docsy Example Project as a template
 
-The following will give you a project that is set up and ready to use (don't forget to use `--recurse-submodules` or you won't pull down some of the code you need to generate a working site). The `hugo server` command builds and serves the site. If you just want to build the site, run `hugo` instead.
+The Docsy Example Project is a template project, so it's easy to create your own copy to edit. To create your own copy of the Docsy example site repo:
 
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/google/docsy-example.git
-cd docsy-example
-hugo server
-```
+1. Go to the [repo page](https://github.com/google/docsy-example) and click **Use this template**.
 
-The theme is included as a Git submodule:
+1. Type your chosen name for your new repository in the **Repository name** field. You can also add an optional **Description**.
+
+1. Click **Create repository from template** to create your new repository. Congratulations, you now have a Docsy site repo!
+
+1. To test your copied site locally with Hugo, or make local edits, you'll also need to make a local copy of your new repository. To do this, use `git clone`, replacing `https://github.com/my/example.git` with your repo's web URL (don't forget to use `--recurse-submodules` or you won't pull down some of the code you need to generate a working site):
+
+    <pre>
+    git clone --recurse-submodules --depth 1 <em>https://github.com/my/example.git</em>
+    </pre>
+
+You can now edit your local versions of the site's source files. To preview your site, go to your site root directory and run `hugo server`. By default, your site will be available at http://localhost:1313/. To push changes to your new repo, go to your site root directory and use `git push`.
+
+The Docsy theme is included as a Git submodule so you can update it easily:
 
 ```bash
 ▶ git submodule
@@ -46,13 +54,3 @@ git subtree add --prefix exampleSite https://github.com/google/docsy.git  master
 ```
 
 To pull in changes, see `pull-deps.sh` script in the theme.-->
-
-## Running the website locally
-
-Once you've cloned the site repo, from the repo root folder, run:
-
-```
-hugo server
-```
-
-Navigate to http://localhost:1313/td/docs/getting-started/ to read the theme documentation.
